@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const TripSchema = new mongoose.Schema({
     budget: Number,
     cost: Number,
-    date: Number,
     lodging: {
         title: String,
         cost: Number
