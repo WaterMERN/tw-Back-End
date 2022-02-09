@@ -18,9 +18,9 @@ app.use(cors())
 //ROUTES
 //===========
 // //Redirect currently commented out believe main page on front end will be create trip 
-// app.get('/', (req, res) => {
-//      res.redirect('/trips')
-// })
+app.get('/', (req, res) => {
+     res.redirect('/trips')
+})
 
 //===========
 //CONTROLLERS
@@ -28,8 +28,8 @@ app.use(cors())
 const tripController = require('./controllers/tripController');
 app.use('/trips', tripController);
 
-// const userController = require('./controllers/userController');
-// app.use('/', userController);
+const userController = require('./controllers/userController');
+app.use('/', userController);
 
 //============
 //START SERVER
