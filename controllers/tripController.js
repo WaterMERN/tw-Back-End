@@ -1,23 +1,24 @@
 const express = require('express')
-const Trip = require('../models/Trip')
-const router = express.Router()
 
-const { requireToken } =require('../middleware/authorization')
-const res = require('express/lib/response')
+const router = express.Router()
+const Trip = require('../models/Trip')
+// console.log(Trip)
+// const { requireToken } =require('../middleware/authorization')
+// const res = require('express/lib/response')
 // add require token in after all route testing and  authorization built Stretch
 
 //get all trips
-router.get("/trips", async (req, res, next) => {
+router.get("/", async (req, res, next) => {
     try{
         const trip = await Trip.find({});
-        res.json(trip); 
+        console.log(res.json(trip)); 
     } catch (err) {
         next(err);
     }
 });
 
 //Get one trip by id
-router.get("/trips:id", async (req, res, next) => {
+router.get("/:id", async (req, res, next) => {
     try {
         const oneTrip = await Trip.findById(req.params.id);
         res.json(oneTrip);
@@ -27,7 +28,7 @@ router.get("/trips:id", async (req, res, next) => {
 });
 
 //Add a new trip based on the body of the request
-router.post("/trips", async (req, res, next) => {
+router.post("/", async (req, res, next) => {
     try {
         const newTrip = await Trip.create(req.body);
         res.status(201).json(newTrip);
@@ -37,7 +38,20 @@ router.post("/trips", async (req, res, next) => {
 });
 
 //Updating trip data, specify which one by ID
-router.put("/trips/:id", async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
+    try {
+        const tripToUpdate = await Trip.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            {new:true}
+        );
+        res.status(200).json(tripToUpdate);
+    } catch (err) {
+        next(err);
+    }
+});
+
+router.patch("/:id", async (req, res, next) => {
     try {
         const tripToUpdate = await Trip.findByIdAndUpdate(
             req.params.id,

@@ -1,5 +1,5 @@
 // for testing database data 
-// const mongoose = require('./connection')
+const mongoose = require('./connection')
 
 const tripSeeds = require('./tripSeeds.json')
 const userSeeds = require('./userSeeds.json')
