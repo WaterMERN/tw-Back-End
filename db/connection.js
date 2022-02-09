@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const mongoURI = process.env.DATABASE_URL; 
 const db = mongoose.connection;
-console.log(mongoURI);
+// console.log(mongoURI);
 
 mongoose.connect(mongoURI);
 

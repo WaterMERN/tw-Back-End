@@ -22,6 +22,6 @@ const TripSchema = new mongoose.Schema({
     }
 })
 
-const Trips = mongoose.model('Trip', TripSchema)
+const Trip = mongoose.model('Trip', TripSchema)
 
-module.exports = Trips
+module.exports = Trip
