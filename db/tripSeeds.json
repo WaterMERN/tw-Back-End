@@ -1,0 +1,62 @@
+[
+    {
+        "budget": 500,
+        "cost": 345,
+        "lodging": {
+            "title": "Holiday Inn",
+            "cost": 80
+        },
+        "food": {
+            "title": "Subway",
+            "cost": 20
+        },
+        "transport": {
+            "title": "American Airlines",
+            "cost": 200
+        },
+        "other": {
+            "title": "Karaoke bar",
+            "cost": 45
+        }
+    },
+    {
+        "budget": 1500,
+        "cost": 370,
+        "lodging": {
+            "title": "Four Seasons",
+            "cost": 250
+        },
+        "food": {
+            "title": "Panda Express",
+            "cost": 15
+        },
+        "transport": {
+            "title": "Uber",
+            "cost": 65
+        },
+        "other": {
+            "title": "Movies",
+            "cost": 40
+        }
+    },
+    {
+        "budget": 200,
+        "cost": 290,
+        "lodging": {
+            "title": "Hilton",
+            "cost": 90
+        },
+        "food": {
+            "title": "Applebees",
+            "cost": 30
+        },
+        "transport": {
+            "title": "United Airlines",
+            "cost": 120
+        },
+        "other": {
+            "title": "City Tour",
+            "cost": 50
+        }
+    }
+]
