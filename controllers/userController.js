@@ -27,6 +27,7 @@ router.post('/createaccount', async (req, res, next) => {
 });
 
 //LOG IN 
+// router.post('/login', (req, res, next) => {});
 router.post('/login', (req, res, next) => {
     User.findOne( {email: req.body.email})
     .then((user) => {

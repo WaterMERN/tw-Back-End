@@ -19,7 +19,7 @@ app.use(cors())
 //===========
 // //Redirect currently commented out believe main page on front end will be create trip 
 app.get('/', (req, res) => {
-     res.redirect('/trips/')
+     res.redirect('/trips')
 })
 
 //===========
