@@ -52,6 +52,7 @@ router.put("/:id", async (req, res, next) => {
 });
 
 router.patch("/:id", async (req, res, next) => {
+
     try {
         const tripToUpdate = await Trip.findByIdAndUpdate(
             req.params.id,
