@@ -5,6 +5,7 @@ const TripSchema = new mongoose.Schema({
   name: String,
   budget: Number,
   cost: Number,
+  length: Number,
   expense: [Expense],
 });
 
