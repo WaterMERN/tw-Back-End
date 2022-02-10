@@ -1,28 +1,13 @@
-const mongoose = require('mongoose')
-
+const mongoose = require("mongoose");
+const Expense = require("../models/Expense");
 
 const TripSchema = new mongoose.Schema({
-    name: String,
-    budget: Number,
-    cost: Number,
-    lodging: {
-        title: String,
-        cost: Number
-    },
-    food: {
-        title: String,
-        cost: Number
-    },
-    transport: {
-        title: String,
-        cost: Number
-    },
-    other: {
-        title: String,
-        cost: Number
-    }
-})
+  name: String,
+  budget: Number,
+  cost: Number,
+  expense: [Expense],
+});
 
-const Trip = mongoose.model('Trip', TripSchema)
+const Trip = mongoose.model("Trip", TripSchema);
 
-module.exports = Trip
+module.exports = Trip;
