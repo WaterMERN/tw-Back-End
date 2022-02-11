@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const { requireToken } = require('../middleware/authorization');
 
 const router = express.Router()
 const Trip = require('../models/Trip')
@@ -38,7 +39,7 @@ router.post("/", async (req, res, next) => {
 });
 
 //Updating trip data, specify which one by ID
-router.put("/:id", async (req, res, next) => {
+router.put("/:id", requireToken, async (req, res, next) => {
     try {
         const tripToUpdate = await Trip.findByIdAndUpdate(
             req.params.id,
