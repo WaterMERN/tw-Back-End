@@ -6,7 +6,7 @@ const TripSchema = new mongoose.Schema({
   budget: Number,
   cost: Number,
   length: Number,
-  expense: [Expense],
+  expenses: Array,
 });
 
 const Trip = mongoose.model("Trip", TripSchema);
