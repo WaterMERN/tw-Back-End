@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const { requireToken } = require('../middleware/authorization');
 
 const router = express.Router()
 const Trip = require('../models/Trip')
@@ -7,8 +8,8 @@ const Trip = require('../models/Trip')
 // const res = require('express/lib/response')
 // add require token in after all route testing and  authorization built Stretch
 
-//get all trips
-router.get("/", async (req, res, next) => {
+//get all trips add requireToken after figuring out how to store token in a cookie,
+router.get("/", requireToken, async (req, res, next) => {
     try{
         const trip = await Trip.find({});
         console.log(res.json(trip)); 
@@ -18,7 +19,7 @@ router.get("/", async (req, res, next) => {
 });
 
 //Get one trip by id
-router.get("/:id", async (req, res, next) => {
+router.get("/:id", requireToken, async (req, res, next) => {
     try {
         const oneTrip = await Trip.findById(req.params.id);
         res.json(oneTrip);
@@ -28,7 +29,7 @@ router.get("/:id", async (req, res, next) => {
 });
 
 //Add a new trip based on the body of the request
-router.post("/", async (req, res, next) => {
+router.post("/", requireToken, async (req, res, next) => {
     try {
         const newTrip = await Trip.create(req.body);
         res.status(201).json(newTrip);
@@ -38,7 +39,7 @@ router.post("/", async (req, res, next) => {
 });
 
 //Updating trip data, specify which one by ID
-router.put("/:id", async (req, res, next) => {
+router.put("/:id", requireToken, async (req, res, next) => {
     try {
         const tripToUpdate = await Trip.findByIdAndUpdate(
             req.params.id,
@@ -51,7 +52,7 @@ router.put("/:id", async (req, res, next) => {
     }
 });
 
-router.patch("/:id", async (req, res, next) => {
+router.patch("/:id", requireToken, async (req, res, next) => {
 
     try {
         const tripToUpdate = await Trip.findByIdAndUpdate(
@@ -66,7 +67,7 @@ router.patch("/:id", async (req, res, next) => {
 });
 
 //Delete a trip, specify which one by ID
-router.delete("/:id", async (req, res, next) => {
+router.delete("/:id", requireToken, async (req, res, next) => {
     try {
         const tripToDelete = await Trip.findByIdAndDelete(
             req.params.id

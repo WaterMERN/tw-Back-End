@@ -5,15 +5,16 @@
         "cost": 345,
         "length": 3,
         "expenses": [{
-            "category": "lodging", 
+            "category": "Lodging", 
             "title": "Holiday Inn",
             "cost": 80
         },
         {
-            "category": "food", 
+            "category": "Food", 
             "title": "Pub Inn",
             "cost": 20
-        }]
+        }],
+        "owner": "tigerwoods@gmail.com"
     },
     {
         "name": "hawaii",
@@ -21,15 +22,16 @@
         "cost": 345,
         "length": 3,
         "expenses": [{
-            "category": "lodging", 
+            "category": "Lodging", 
             "title": " Inn",
             "cost": 80
         },
         {
-            "category": "food", 
+            "category": "Food", 
             "title": "BK",
             "cost": 20
-        }]
+        }],
+        "owner": "tigerwoods@gmail.com"
     },
     {
         "name": "arizona",
@@ -37,14 +39,15 @@
         "cost": 3245,
         "length": 6,
         "expenses": [{
-            "category": "lodging", 
+            "category": "Lodging", 
             "title": "Holiday Inn",
             "cost": 120
         },
         {
-            "category": "food", 
+            "category": "Food", 
             "title": "Pub Inn",
             "cost": 120
-        }]
+        }],
+        "owner": "tigerwoods@gmail.com"
     }
 ]
