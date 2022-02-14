@@ -33,7 +33,7 @@ const createUserToken = (req, user) => {
         const error = new Error('The username or password is incorrect')
         error.statusCode = 422
         throw error
-    }return jwt.sign({ id: user._id }, sercret, {expiresIn: 36000 })
+    }return jwt.sign({ id: user._id }, secret, {expiresIn: 36000 })
 }
 
 module.exports = {

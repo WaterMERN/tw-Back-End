@@ -28,8 +28,8 @@ app.get('/', (req, res) => {
 const tripController = require('./controllers/tripController');
 app.use('/trips', tripController);
 
-// const userController = require('./controllers/userController');
-// app.use('/', userController);
+const userController = require('./controllers/userController');
+app.use('/', userController);
 
 //============
 //START SERVER

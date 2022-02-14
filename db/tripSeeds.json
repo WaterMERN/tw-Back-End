@@ -5,12 +5,12 @@
         "cost": 345,
         "length": 3,
         "expenses": [{
-            "category": "lodging", 
+            "category": "Lodging", 
             "title": "Holiday Inn",
             "cost": 80
         },
         {
-            "category": "food", 
+            "category": "Food", 
             "title": "Pub Inn",
             "cost": 20
         }]
@@ -21,12 +21,12 @@
         "cost": 345,
         "length": 3,
         "expenses": [{
-            "category": "lodging", 
+            "category": "Lodging", 
             "title": " Inn",
             "cost": 80
         },
         {
-            "category": "food", 
+            "category": "Food", 
             "title": "BK",
             "cost": 20
         }]
@@ -37,12 +37,12 @@
         "cost": 3245,
         "length": 6,
         "expenses": [{
-            "category": "lodging", 
+            "category": "Lodging", 
             "title": "Holiday Inn",
             "cost": 120
         },
         {
-            "category": "food", 
+            "category": "Food", 
             "title": "Pub Inn",
             "cost": 120
         }]
