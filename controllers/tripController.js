@@ -9,7 +9,7 @@ const Trip = require('../models/Trip')
 // add require token in after all route testing and  authorization built Stretch
 
 //get all trips add requireToken after figuring out how to store token in a cookie,
-router.get("/",  async (req, res, next) => {
+router.get("/", requireToken, async (req, res, next) => {
     try{
         const trip = await Trip.find({});
         console.log(res.json(trip)); 

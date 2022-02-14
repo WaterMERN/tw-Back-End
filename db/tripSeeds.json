@@ -13,7 +13,8 @@
             "category": "Food", 
             "title": "Pub Inn",
             "cost": 20
-        }]
+        }],
+        "owner": "tigerwoods@gmail.com"
     },
     {
         "name": "hawaii",
@@ -29,7 +30,8 @@
             "category": "Food", 
             "title": "BK",
             "cost": 20
-        }]
+        }],
+        "owner": "tigerwoods@gmail.com"
     },
     {
         "name": "arizona",
@@ -45,6 +47,7 @@
             "category": "Food", 
             "title": "Pub Inn",
             "cost": 120
-        }]
+        }],
+        "owner": "tigerwoods@gmail.com"
     }
 ]
